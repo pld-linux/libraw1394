@@ -5,13 +5,6 @@ Version:	0.9.0
 Release:	3
 License:	LGPL
 Group:		Libraries
-Group(de):	Libraries
-Group(es):	Bibliotecas
-Group(fr):	Librairies
-Group(pl):	Biblioteki
-Group(pt_BR):	Bibliotecas
-Group(ru):	Библиотеки
-Group(uk):	Б╕бл╕отеки
 Source0:	http://download.sourceforge.net/libraw1394/%{name}_%{version}.tar.gz
 URL:		http://libraw1394.sourceforge.net
 BuildRequires:	autoconf
@@ -38,13 +31,6 @@ kernelowego drivera w zapytaniu.
 Summary:	libraw1394 header files
 Summary(pl):	Pliki nagЁСwkowe biblioteki libraw1394
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description devel
@@ -57,13 +43,6 @@ Pliki nagЁСwkowe biblioteki libraw1394.
 Summary:	libraw1394 static libraries
 Summary(pl):	Statyczne biblioteki do obsЁugi formatu IEEE-1394
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
 %description static

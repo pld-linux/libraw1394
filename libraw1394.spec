@@ -12,6 +12,7 @@ Source0:	http://download.sourceforge.net/libraw1394/%{name}_%{version}.tar.gz
 URL:		http://libraw1394.sourceforge.net
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+
 %description
 libraw1394 is the only supported interface to the kernel side raw1394 of
 the Linux IEEE-1394 subsystem, which provides direct access to the
@@ -19,6 +20,12 @@ connected 1394 buses to user space.  Through libraw1394/raw1394,
 applications can directly send to and receive from other nodes without
 requiring a kernel driver for the protocol in question.
 
+%description -l pl
+libraw1394 jest jedynym supportowanym po stronie kernela linuxowego
+raw1394 subsystemu IEEE-1394, który zapewnia bezpo¶redni dostêp do
+szyn 1394 w przestrzeni u¿ytkownika. Poprzez libraw1394/raw1394 aplikacje
+mog± bezpo¶rednio wysy³aæ i otrzymywaæ z innych koñcówek bez potrzeby
+kernelowego drivera w zapytaniu.
 
 %package devel
 Summary:	libraw1394 header files
@@ -30,6 +37,7 @@ Group(pl):	Programowanie/Biblioteki
 Requires:	%{name} = %{version}
 
 %description devel
+libraw1394 devel package
 
 %package static
 Summary:	libraw1394 static libraries
@@ -42,6 +50,10 @@ Requires:	%{name} = %{version}
 
 
 %description static
+libraw1394 static package
+
+%description static -l pl
+libraw1394 - statyczne biblioteki
 
 %prep
 %setup  -q

@@ -1,25 +1,28 @@
-Summary:	-
-Summary(pl):	-
+Summary:	Interface to Linux IEEE-1394 subsystem
+Summary(pl):	Biblioteka do obs³ugi podsystemu IEEE-1394
 Name:		libraw1394
 Version:	0.8.2
 Release:	1
 License:	LGPL
-Group:		X11/Libraries
-Group(de):	X11/Libraries
-Group(es):	X11/Bibliotecas
-Group(pl):	X11/Biblioteki
+Group:		Libraries
+Group(de):	Libraries
+Group(es):	Bibliotecas
+Group(pl):	Biblioteki
 Source0:	http://download.sourceforge.net/libraw1394/%{name}_%{version}.tar.gz
 URL:		http://libraw1394.sourceforge.net
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
-
 %description
+libraw1394 is the only supported interface to the kernel side raw1394 of
+the Linux IEEE-1394 subsystem, which provides direct access to the
+connected 1394 buses to user space.  Through libraw1394/raw1394,
+applications can directly send to and receive from other nodes without
+requiring a kernel driver for the protocol in question.
+
 
 %package devel
-Summary:	DV library headers
-Summary(pl):	Pliki nag³ówkowe biblioteki DV
+Summary:	libraw1394 header files
+Summary(pl):	Pliki nag³ówkowe biblioteki libraw1394
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
@@ -29,8 +32,8 @@ Requires:	%{name} = %{version}
 %description devel
 
 %package static
-Summary:	DV static libraries
-Summary(pl):	Statyczne biblioteki do obs³ugi formatu DV
+Summary:	libraw1394 static libraries
+Summary(pl):	Statyczne biblioteki do obs³ugi formatu IEEE-1394
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies

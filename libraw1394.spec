@@ -14,7 +14,6 @@ BuildRequires:	automake
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-
 %description
 libraw1394 is the only supported interface to the kernel side raw1394
 of the Linux IEEE-1394 subsystem, which provides direct access to the
@@ -42,25 +41,27 @@ libraw1394 devel package.
 Pliki nag³ówkowe biblioteki libraw1394.
 
 %package static
-Summary:	libraw1394 static libraries
-Summary(pl):	Statyczne biblioteki do obs³ugi formatu IEEE-1394
+Summary:	libraw1394 static library
+Summary(pl):	Statyczna biblioteka do obs³ugi formatu IEEE-1394
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}
 
 %description static
-libraw1394 static package.
+libraw1394 static librawy.
 
 %description static -l pl
-libraw1394 - statyczne biblioteki.
+Statyczna biblioteka libraw1394.
 
 %prep
-%setup  -q
+%setup -q
 %patch0 -p1
 
 %build
 %{__libtoolize}
 %{__aclocal}
+%{__autoheader}
 %{__autoconf}
+%{__automake}
 %configure
 %{__make}
 
@@ -71,11 +72,11 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	aclocaldir=%{_aclocaldir}
 
-%post   -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
-
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post   -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)

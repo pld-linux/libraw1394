@@ -6,13 +6,13 @@
  const char not_compatible[] = "\
 -This libraw1394 does not work with your version of Linux. You need a different
 -version that matches your kernel (see kernel help text for the raw1394 option to
-+This libraw1394 does not work with your version of Linux. You need a different \
-+version that matches your kernel (see kernel help text for the raw1394 option to \
++This libraw1394 does not work with your version of Linux. You need a different\n\
++version that matches your kernel (see kernel help text for the raw1394 option to\n\
  find out which is the correct version).\n";
  
  const char not_loaded[] = "\
 -This probably means that you don't have raw1394 support in the kernel or that
-+This probably means that you don't have raw1394 support in the kernel or that \
++This probably means that you don't have raw1394 support in the kernel or that\n\
  you haven't loaded the raw1394 module.\n";
  
  quadlet_t buffer;

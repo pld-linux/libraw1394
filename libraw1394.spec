@@ -1,7 +1,7 @@
 Summary:	Interface to Linux IEEE-1394 subsystem
 Summary(pl):	Biblioteka do obs³ugi podsystemu IEEE-1394
 Name:		libraw1394
-Version:	0.8.2
+Version:	0.9.0
 Release:	1
 License:	LGPL
 Group:		Libraries
@@ -37,7 +37,10 @@ Group(pl):	Programowanie/Biblioteki
 Requires:	%{name} = %{version}
 
 %description devel
-libraw1394 devel package
+libraw1394 devel package.
+
+%description -l pl devel
+Pliki nag³ówkowe biblioteki libraw1394.
 
 %package static
 Summary:	libraw1394 static libraries
@@ -48,12 +51,11 @@ Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name} = %{version}
 
-
 %description static
-libraw1394 static package
+libraw1394 static package.
 
 %description static -l pl
-libraw1394 - statyczne biblioteki
+libraw1394 - statyczne biblioteki.
 
 %prep
 %setup  -q
@@ -65,7 +67,9 @@ libraw1394 - statyczne biblioteki
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT \
+	aclocaldir=%{_aclocaldir}
 
 gzip -9nf README NEWS 
 
@@ -78,12 +82,14 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc {README,NEWS}*
-%attr(755,root,root) %{_libdir}/lib*.so.*
+%attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/lib*.so
+%attr(755,root,root) %{_libdir}/lib*.la
 %{_includedir}/libraw1394
+%{_aclocaldir}/libraw1394.m4
 
 %files static
 %defattr(644,root,root,755)

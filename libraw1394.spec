@@ -68,8 +68,6 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	aclocaldir=%{_aclocaldir}
 
-gzip -9nf README NEWS
-
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
@@ -78,7 +76,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {README,NEWS}*
+%doc README NEWS
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files devel

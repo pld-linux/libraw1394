@@ -21,7 +21,7 @@ applications can directly send to and receive from other nodes without
 requiring a kernel driver for the protocol in question.
 
 %description -l pl
-libraw1394 jest jedynym supportowanym po stronie kernela linuxowego
+libraw1394 jest jedynym supportowanym po stronie kernela linuksowego
 raw1394 subsystemu IEEE-1394, który zapewnia bezpo¶redni dostêp do
 szyn 1394 w przestrzeni u¿ytkownika. Poprzez libraw1394/raw1394 aplikacje
 mog± bezpo¶rednio wysy³aæ i otrzymywaæ z innych koñcówek bez potrzeby

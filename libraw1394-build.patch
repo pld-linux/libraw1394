@@ -1,0 +1,18 @@
+--- libraw1394-0.9.0-orig/src/testlibraw.c	2001-01-27 02:26:32.000000000 +0000
++++ libraw1394-0.9.0/src/testlibraw.c	2003-09-25 13:34:50.000000000 +0000
+@@ -20,12 +20,12 @@
+ #define TESTADDR (CSR_REGISTER_BASE + CSR_CYCLE_TIME)
+ 
+ const char not_compatible[] = "\
+-This libraw1394 does not work with your version of Linux. You need a different
+-version that matches your kernel (see kernel help text for the raw1394 option to
++This libraw1394 does not work with your version of Linux. You need a different \
++version that matches your kernel (see kernel help text for the raw1394 option to \
+ find out which is the correct version).\n";
+ 
+ const char not_loaded[] = "\
+-This probably means that you don't have raw1394 support in the kernel or that
++This probably means that you don't have raw1394 support in the kernel or that \
+ you haven't loaded the raw1394 module.\n";
+ 
+ quadlet_t buffer;

@@ -7,6 +7,7 @@ License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/libraw1394/%{name}_%{version}.tar.gz
 # Source0-md5: 56fc0bc6f00efdebb635dcc52d91f7bc
+Patch0:		%{name}-build.patch
 URL:		http://libraw1394.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -54,6 +55,7 @@ libraw1394 - statyczne biblioteki.
 
 %prep
 %setup  -q
+%patch0 -p1
 
 %build
 %{__libtoolize}

@@ -56,7 +56,7 @@ libraw1394 - statyczne biblioteki.
 
 %build
 %{__libtoolize}
-aclocal
+%{__aclocal}
 %{__autoconf}
 %configure
 %{__make}

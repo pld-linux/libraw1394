@@ -5,7 +5,7 @@ Version:	0.9.0
 Release:	3
 License:	LGPL
 Group:		Libraries
-Source0:	http://download.sourceforge.net/libraw1394/%{name}_%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/libraw1394/%{name}_%{version}.tar.gz
 # Source0-md5: 56fc0bc6f00efdebb635dcc52d91f7bc
 URL:		http://libraw1394.sourceforge.net
 BuildRequires:	autoconf

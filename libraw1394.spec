@@ -1,12 +1,12 @@
 Summary:	Interface to Linux IEEE-1394 subsystem
 Summary(pl):	Biblioteka do obs³ugi podsystemu IEEE-1394
 Name:		libraw1394
-Version:	0.10.0
+Version:	0.10.1
 Release:	1
 License:	LGPL
 Group:		Libraries
-Source0:	http://www.linux1394.org/files/libraw1394/%{name}-%{version}.tar.gz
-# Source0-md5:	95f4e9a6dbd7543b94e2cc70562d9073
+Source0:	http://www.linux1394.org/files/%{name}/%{name}-%{version}.tar.gz
+# Source0-md5:	f243011cc20d4b7357a48732ea555e3a
 Patch0:		%{name}-am18.patch
 Patch1:		%{name}-doc.patch
 URL:		http://www.linux1394.org/
@@ -99,6 +99,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/lib*.la
 %{_includedir}/libraw1394
 %{_aclocaldir}/libraw1394.m4
+%{_pkgconfigdir}/*.pc
 
 %files static
 %defattr(644,root,root,755)

@@ -57,7 +57,7 @@ libraw1394 - statyczne biblioteki.
 %build
 libtoolize --copy --force
 aclocal
-autoconf
+%{__autoconf}
 %configure
 %{__make}
 

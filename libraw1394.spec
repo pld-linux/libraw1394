@@ -1,17 +1,20 @@
 Summary:	Interface to Linux IEEE-1394 subsystem
 Summary(pl):	Biblioteka do obs³ugi podsystemu IEEE-1394
 Name:		libraw1394
-Version:	0.9.0
-Release:	4
+Version:	0.10.0
+Release:	1
 License:	LGPL
 Group:		Libraries
-Source0:	http://dl.sourceforge.net/libraw1394/%{name}_%{version}.tar.gz
-# Source0-md5: 56fc0bc6f00efdebb635dcc52d91f7bc
-Patch0:		%{name}-build.patch
-Patch1:		%{name}-am18.patch
-URL:		http://libraw1394.sourceforge.net/
-BuildRequires:	autoconf
+Source0:	http://www.linux1394.org/files/libraw1394/%{name}-%{version}.tar.gz
+# Source0-md5:	95f4e9a6dbd7543b94e2cc70562d9073
+Patch0:		%{name}-am18.patch
+Patch1:		%{name}-doc.patch
+URL:		http://www.linux1394.org/
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
+BuildRequires:	docbook-dtd31-sgml
+BuildRequires:	docbook-style-dsssl
+BuildRequires:	docbook-utils
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -33,7 +36,7 @@ potrzeby kernelowego drivera w zapytaniu.
 Summary:	libraw1394 header files
 Summary(pl):	Pliki nag³ówkowe biblioteki libraw1394
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 libraw1394 devel package.
@@ -45,7 +48,7 @@ Pliki nag³ówkowe biblioteki libraw1394.
 Summary:	libraw1394 static library
 Summary(pl):	Statyczna biblioteka do obs³ugi formatu IEEE-1394
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 libraw1394 static librawy.
@@ -67,12 +70,13 @@ Statyczna biblioteka libraw1394.
 %configure
 %{__make}
 
+%{__make} -C doc htmldoc
+
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
-	aclocaldir=%{_aclocaldir}
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -82,11 +86,15 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README NEWS
+%doc AUTHORS NEWS README
+%attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
+%{_mandir}/man1/*
+%{_mandir}/man5/isodump.5*
 
 %files devel
 %defattr(644,root,root,755)
+%doc doc/libraw1394/*
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
 %{_includedir}/libraw1394

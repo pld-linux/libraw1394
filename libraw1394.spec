@@ -7,7 +7,11 @@ License:	LGPL
 Group:		Libraries
 Group(de):	Libraries
 Group(es):	Bibliotecas
+Group(fr):	Librairies
 Group(pl):	Biblioteki
+Group(pt_BR):	Bibliotecas
+Group(ru):	‚…¬Ã…œ‘≈À…
+Group(uk):	‚¶¬Ã¶œ‘≈À…
 Source0:	http://download.sourceforge.net/libraw1394/%{name}_%{version}.tar.gz
 URL:		http://libraw1394.sourceforge.net
 BuildRequires:	autoconf
@@ -35,6 +39,7 @@ Summary:	libraw1394 header files
 Summary(pl):	Pliki nag≥Ûwkowe biblioteki libraw1394
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name} = %{version}
@@ -50,6 +55,7 @@ Summary:	libraw1394 static libraries
 Summary(pl):	Statyczne biblioteki do obs≥ugi formatu IEEE-1394
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name}-devel = %{version}

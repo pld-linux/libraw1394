@@ -5,7 +5,7 @@ Version:	0.10.1
 Release:	1
 License:	LGPL
 Group:		Libraries
-Source0:	http://www.linux1394.org/files/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://www.linux1394.org/files/libraw1394/%{name}-%{version}.tar.gz
 # Source0-md5:	f243011cc20d4b7357a48732ea555e3a
 Patch0:		%{name}-am18.patch
 Patch1:		%{name}-doc.patch

@@ -1,14 +1,15 @@
 Summary:	Interface to Linux IEEE-1394 subsystem
 Summary(pl):	Biblioteka do obs³ugi podsystemu IEEE-1394
 Name:		libraw1394
-Version:	0.10.1
+Version:	1.2.0
 Release:	1
 License:	LGPL
 Group:		Libraries
-Source0:	http://www.linux1394.org/files/libraw1394/%{name}-%{version}.tar.gz
-# Source0-md5:	f243011cc20d4b7357a48732ea555e3a
-Patch0:		%{name}-am18.patch
-Patch1:		%{name}-doc.patch
+# temporary(?) DNS problems
+#Source0:	http://www.linux1394.org/files/libraw1394/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/libraw1394/%{name}-%{version}.tar.gz
+# Source0-md5:	eea394f74afecd6a22f74110128c9fb6
+Patch0:		%{name}-doc.patch
 URL:		http://www.linux1394.org/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -59,7 +60,6 @@ Statyczna biblioteka libraw1394.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
 
 %build
 %{__libtoolize}
@@ -86,21 +86,20 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS NEWS README
+%doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
+%attr(755,root,root) %{_libdir}/libraw1394.so.*.*
 %{_mandir}/man1/*
 %{_mandir}/man5/isodump.5*
 
 %files devel
 %defattr(644,root,root,755)
 %doc doc/libraw1394/*
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
+%attr(755,root,root) %{_libdir}/libraw1394.so
+%{_libdir}/libraw1394.la
 %{_includedir}/libraw1394
-%{_aclocaldir}/libraw1394.m4
-%{_pkgconfigdir}/*.pc
+%{_pkgconfigdir}/libraw1394.pc
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libraw1394.a

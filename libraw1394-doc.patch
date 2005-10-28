@@ -1,11 +1,41 @@
---- libraw1394-0.10.0/doc/libraw1394.sgml.orig	2003-07-13 03:37:03.000000000 +0200
-+++ libraw1394-0.10.0/doc/libraw1394.sgml	2004-02-22 01:06:28.058486712 +0100
-@@ -320,6 +320,8 @@
- 	these cases.
-       </para>
+--- libraw1394-1.2.0/doc/libraw1394.sgml.orig	2005-02-16 17:52:14.000000000 +0100
++++ libraw1394-1.2.0/doc/libraw1394.sgml	2005-10-28 22:06:11.520241536 +0200
+@@ -2832,10 +2832,10 @@
  
-+    </sect1>
-+
-   </chapter>
+ <refentry>
+ <refmeta>
+-<refentrytitle><phrase id="API-int">int</phrase></refentrytitle>
++<refentrytitle><phrase id="API-req-callback-t">req_callback_t</phrase></refentrytitle>
+ </refmeta>
+ <refnamediv>
+- <refname>int</refname>
++ <refname>req_callback_t</refname>
+  <refpurpose>
+       This is the general request handler
+  </refpurpose>
+@@ -2872,10 +2872,10 @@
  
-   <chapter id="general">
+ <refentry>
+ <refmeta>
+-<refentrytitle><phrase id="API-int">int</phrase></refentrytitle>
++<refentrytitle><phrase id="API-arm-req-callback-t">arm_req_callback_t</phrase></refentrytitle>
+ </refmeta>
+ <refnamediv>
+- <refname>int</refname>
++ <refname>arm_req_callback_t</refname>
+  <refpurpose>
+       This is the general arm-request handle
+  </refpurpose>
+@@ -5017,10 +5017,10 @@
+ 
+ <refentry>
+ <refmeta>
+-<refentrytitle><phrase id="API-int">int</phrase></refentrytitle>
++<refentrytitle><phrase id="API-iso-handler-t">iso_handler_t</phrase></refentrytitle>
+ </refmeta>
+ <refnamediv>
+- <refname>int</refname>
++ <refname>iso_handler_t</refname>
+  <refpurpose>
+       DEPRECATED
+  </refpurpose>

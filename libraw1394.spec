@@ -1,14 +1,12 @@
 Summary:	Interface to Linux IEEE-1394 subsystem
 Summary(pl):	Biblioteka do obs³ugi podsystemu IEEE-1394
 Name:		libraw1394
-Version:	1.2.0
+Version:	1.2.1
 Release:	1
 License:	LGPL
 Group:		Libraries
-# temporary(?) DNS problems
-#Source0:	http://www.linux1394.org/files/libraw1394/%{name}-%{version}.tar.gz
-Source0:	http://dl.sourceforge.net/libraw1394/%{name}-%{version}.tar.gz
-# Source0-md5:	eea394f74afecd6a22f74110128c9fb6
+Source0:	http://www.linux1394.org/dl/%{name}-%{version}.tar.gz
+# Source0-md5:	e6210ff05b7f4ec0401ad3d11f493e1a
 Patch0:		%{name}-doc.patch
 URL:		http://www.linux1394.org/
 BuildRequires:	autoconf >= 2.50

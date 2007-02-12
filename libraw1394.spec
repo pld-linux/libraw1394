@@ -1,5 +1,5 @@
 Summary:	Interface to Linux IEEE-1394 subsystem
-Summary(pl):	Biblioteka do obs≥ugi podsystemu IEEE-1394
+Summary(pl.UTF-8):   Biblioteka do obs≈Çugi podsystemu IEEE-1394
 Name:		libraw1394
 Version:	1.2.1
 Release:	1
@@ -24,35 +24,35 @@ connected 1394 buses to user space. Through libraw1394/raw1394,
 applications can directly send to and receive from other nodes without
 requiring a kernel driver for the protocol in question.
 
-%description -l pl
+%description -l pl.UTF-8
 libraw1394 jest jedynym supportowanym po stronie kernela linuksowego
-raw1394 subsystemu IEEE-1394, ktÛry zapewnia bezpo∂redni dostÍp do
-szyn 1394 w przestrzeni uøytkownika. Poprzez libraw1394/raw1394
-aplikacje mog± bezpo∂rednio wysy≥aÊ i otrzymywaÊ z innych koÒcÛwek bez
+raw1394 subsystemu IEEE-1394, kt√≥ry zapewnia bezpo≈õredni dostƒôp do
+szyn 1394 w przestrzeni u≈ºytkownika. Poprzez libraw1394/raw1394
+aplikacje mogƒÖ bezpo≈õrednio wysy≈Çaƒá i otrzymywaƒá z innych ko≈Ñc√≥wek bez
 potrzeby kernelowego drivera w zapytaniu.
 
 %package devel
 Summary:	libraw1394 header files
-Summary(pl):	Pliki nag≥Ûwkowe biblioteki libraw1394
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe biblioteki libraw1394
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 libraw1394 devel package.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe biblioteki libraw1394.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe biblioteki libraw1394.
 
 %package static
 Summary:	libraw1394 static library
-Summary(pl):	Statyczna biblioteka do obs≥ugi formatu IEEE-1394
+Summary(pl.UTF-8):   Statyczna biblioteka do obs≈Çugi formatu IEEE-1394
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 libraw1394 static librawy.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka libraw1394.
 
 %prep

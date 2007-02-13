@@ -1,5 +1,5 @@
 Summary:	Interface to Linux IEEE-1394 subsystem
-Summary(pl.UTF-8):   Biblioteka do obsługi podsystemu IEEE-1394
+Summary(pl.UTF-8):	Biblioteka do obsługi podsystemu IEEE-1394
 Name:		libraw1394
 Version:	1.2.1
 Release:	1
@@ -33,7 +33,7 @@ potrzeby kernelowego drivera w zapytaniu.
 
 %package devel
 Summary:	libraw1394 header files
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libraw1394
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libraw1394
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -45,7 +45,7 @@ Pliki nagłówkowe biblioteki libraw1394.
 
 %package static
 Summary:	libraw1394 static library
-Summary(pl.UTF-8):   Statyczna biblioteka do obsługi formatu IEEE-1394
+Summary(pl.UTF-8):	Statyczna biblioteka do obsługi formatu IEEE-1394
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 

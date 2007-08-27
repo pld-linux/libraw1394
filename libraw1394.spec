@@ -2,7 +2,7 @@ Summary:	Interface to Linux IEEE-1394 subsystem
 Summary(pl.UTF-8):	Biblioteka do obsługi podsystemu IEEE-1394
 Name:		libraw1394
 Version:	1.2.1
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries
 Source0:	http://www.linux1394.org/dl/%{name}-%{version}.tar.gz

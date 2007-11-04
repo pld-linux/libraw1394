@@ -1,12 +1,12 @@
 Summary:	Interface to Linux IEEE-1394 subsystem
 Summary(pl.UTF-8):	Biblioteka do obsługi podsystemu IEEE-1394
 Name:		libraw1394
-Version:	1.2.1
-Release:	2
-License:	LGPL
+Version:	1.3.0
+Release:	1
+License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://www.linux1394.org/dl/%{name}-%{version}.tar.gz
-# Source0-md5:	e6210ff05b7f4ec0401ad3d11f493e1a
+# Source0-md5:	c5d9ab62bd25dba96af010b3471e816a
 Patch0:		%{name}-doc.patch
 URL:		http://www.linux1394.org/
 BuildRequires:	autoconf >= 2.50
@@ -85,9 +85,14 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
-%attr(755,root,root) %{_bindir}/*
-%attr(755,root,root) %{_libdir}/libraw1394.so.*.*
-%{_mandir}/man1/*
+%attr(755,root,root) %{_bindir}/dumpiso
+%attr(755,root,root) %{_bindir}/sendiso
+%attr(755,root,root) %{_bindir}/testlibraw
+%attr(755,root,root) %{_libdir}/libraw1394.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libraw1394.so.8
+%{_mandir}/man1/dumpiso.1*
+%{_mandir}/man1/sendiso.1*
+%{_mandir}/man1/testlibraw.1*
 %{_mandir}/man5/isodump.5*
 
 %files devel

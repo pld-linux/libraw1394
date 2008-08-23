@@ -26,16 +26,3 @@
   <refpurpose>
        This is the general arm-request handle
   </refpurpose>
-@@ -5017,10 +5017,10 @@
- 
- <refentry>
- <refmeta>
--<refentrytitle><phrase id="API-int">int</phrase></refentrytitle>
-+<refentrytitle><phrase id="API-iso-handler-t">iso_handler_t</phrase></refentrytitle>
- </refmeta>
- <refnamediv>
-- <refname>int</refname>
-+ <refname>iso_handler_t</refname>
-  <refpurpose>
-       DEPRECATED
-  </refpurpose>

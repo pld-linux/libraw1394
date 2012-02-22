@@ -1,12 +1,12 @@
 Summary:	Interface to Linux IEEE-1394 subsystem
 Summary(pl.UTF-8):	Biblioteka do obsługi podsystemu IEEE-1394
 Name:		libraw1394
-Version:	2.0.7
+Version:	2.0.8
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
-Source0:	http://ftp.kernel.org/pub/linux/libs/ieee1394/%{name}-%{version}.tar.bz2
-# Source0-md5:	997ef18ab8e2e21f3966dff00e92be28
+Source0:	http://ftp.kernel.org/pub/linux/libs/ieee1394/%{name}-%{version}.tar.xz
+# Source0-md5:	df808e85ebfdfd0485a9938fcfd2d1c6
 URL:		http://ieee1394.wiki.kernel.org/
 #URL:		http://www.linux1394.org/
 #URL:		http://sourceforge.net/projects/libraw1394/
@@ -16,6 +16,8 @@ BuildRequires:	docbook-dtd412-xml
 BuildRequires:	docbook-style-xsl
 BuildRequires:	docbook-utils
 BuildRequires:	libtool
+BuildRequires:	tar >= 1:1.22
+BuildRequires:	xz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

@@ -7,8 +7,7 @@ License:	LGPL v2.1+
 Group:		Libraries
 Source0:	https://www.kernel.org/pub/linux/libs/ieee1394/%{name}-%{version}.tar.xz
 # Source0-md5:	118060584c04f1aa5e29c4d22c1c235a
-URL:		http://ieee1394.wiki.kernel.org/
-#URL:		http://sourceforge.net/projects/libraw1394/
+URL:		https://ieee1394.wiki.kernel.org/index.php/Libraries#libraw1394
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	docbook-dtd412-xml
